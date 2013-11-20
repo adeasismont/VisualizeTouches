@@ -19,12 +19,12 @@
 		059938D71823DDED00655FB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 059938BF1823DDED00655FB1 /* UIKit.framework */; };
 		059938DF1823DDED00655FB1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 059938DD1823DDED00655FB1 /* InfoPlist.strings */; };
 		059938E11823DDED00655FB1 /* VisualizeTouchesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 059938E01823DDED00655FB1 /* VisualizeTouchesTests.m */; };
-		059938F51823DE1200655FB1 /* TouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 059938EC1823DE1200655FB1 /* TouchView.m */; };
-		059938F61823DE1200655FB1 /* TouchesPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 059938EE1823DE1200655FB1 /* TouchesPathView.m */; };
-		059938F71823DE1200655FB1 /* TouchVisualizationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 059938F01823DE1200655FB1 /* TouchVisualizationView.m */; };
-		059938F81823DE1200655FB1 /* UIApplication+interceptEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 059938F21823DE1200655FB1 /* UIApplication+interceptEvents.m */; };
-		059938F91823DE1200655FB1 /* SPFunctional.m in Sources */ = {isa = PBXBuildFile; fileRef = 059938F41823DE1200655FB1 /* SPFunctional.m */; };
-		059938FC1823DF4A00655FB1 /* TouchWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 059938FB1823DF4A00655FB1 /* TouchWindow.m */; };
+		E288FF6C183CBF9500C6752E /* SPFunctional.m in Sources */ = {isa = PBXBuildFile; fileRef = E288FF61183CBF9500C6752E /* SPFunctional.m */; };
+		E288FF6D183CBF9500C6752E /* TouchesPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = E288FF63183CBF9500C6752E /* TouchesPathView.m */; };
+		E288FF6E183CBF9500C6752E /* TouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = E288FF65183CBF9500C6752E /* TouchView.m */; };
+		E288FF6F183CBF9500C6752E /* TouchVisualizationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E288FF67183CBF9500C6752E /* TouchVisualizationView.m */; };
+		E288FF70183CBF9500C6752E /* TouchWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = E288FF69183CBF9500C6752E /* TouchWindow.m */; };
+		E288FF71183CBF9500C6752E /* UIApplication+interceptEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = E288FF6B183CBF9500C6752E /* UIApplication+interceptEvents.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,18 +54,18 @@
 		059938DC1823DDED00655FB1 /* VisualizeTouchesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VisualizeTouchesTests-Info.plist"; sourceTree = "<group>"; };
 		059938DE1823DDED00655FB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		059938E01823DDED00655FB1 /* VisualizeTouchesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VisualizeTouchesTests.m; sourceTree = "<group>"; };
-		059938EB1823DE1200655FB1 /* TouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchView.h; sourceTree = "<group>"; };
-		059938EC1823DE1200655FB1 /* TouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchView.m; sourceTree = "<group>"; };
-		059938ED1823DE1200655FB1 /* TouchesPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchesPathView.h; sourceTree = "<group>"; };
-		059938EE1823DE1200655FB1 /* TouchesPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchesPathView.m; sourceTree = "<group>"; };
-		059938EF1823DE1200655FB1 /* TouchVisualizationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchVisualizationView.h; sourceTree = "<group>"; };
-		059938F01823DE1200655FB1 /* TouchVisualizationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchVisualizationView.m; sourceTree = "<group>"; };
-		059938F11823DE1200655FB1 /* UIApplication+interceptEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+interceptEvents.h"; sourceTree = "<group>"; };
-		059938F21823DE1200655FB1 /* UIApplication+interceptEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+interceptEvents.m"; sourceTree = "<group>"; };
-		059938F31823DE1200655FB1 /* SPFunctional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFunctional.h; sourceTree = "<group>"; };
-		059938F41823DE1200655FB1 /* SPFunctional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFunctional.m; sourceTree = "<group>"; };
-		059938FA1823DF4A00655FB1 /* TouchWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchWindow.h; sourceTree = "<group>"; };
-		059938FB1823DF4A00655FB1 /* TouchWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchWindow.m; sourceTree = "<group>"; };
+		E288FF60183CBF9500C6752E /* SPFunctional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFunctional.h; sourceTree = "<group>"; };
+		E288FF61183CBF9500C6752E /* SPFunctional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFunctional.m; sourceTree = "<group>"; };
+		E288FF62183CBF9500C6752E /* TouchesPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchesPathView.h; sourceTree = "<group>"; };
+		E288FF63183CBF9500C6752E /* TouchesPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchesPathView.m; sourceTree = "<group>"; };
+		E288FF64183CBF9500C6752E /* TouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchView.h; sourceTree = "<group>"; };
+		E288FF65183CBF9500C6752E /* TouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchView.m; sourceTree = "<group>"; };
+		E288FF66183CBF9500C6752E /* TouchVisualizationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchVisualizationView.h; sourceTree = "<group>"; };
+		E288FF67183CBF9500C6752E /* TouchVisualizationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchVisualizationView.m; sourceTree = "<group>"; };
+		E288FF68183CBF9500C6752E /* TouchWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchWindow.h; sourceTree = "<group>"; };
+		E288FF69183CBF9500C6752E /* TouchWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchWindow.m; sourceTree = "<group>"; };
+		E288FF6A183CBF9500C6752E /* UIApplication+interceptEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+interceptEvents.h"; sourceTree = "<group>"; };
+		E288FF6B183CBF9500C6752E /* UIApplication+interceptEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+interceptEvents.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,20 +125,9 @@
 		059938C11823DDED00655FB1 /* VisualizeTouches */ = {
 			isa = PBXGroup;
 			children = (
+				E288FF5F183CBF9500C6752E /* visualize */,
 				059938CA1823DDED00655FB1 /* AKAppDelegate.h */,
 				059938CB1823DDED00655FB1 /* AKAppDelegate.m */,
-				059938EB1823DE1200655FB1 /* TouchView.h */,
-				059938EC1823DE1200655FB1 /* TouchView.m */,
-				059938FA1823DF4A00655FB1 /* TouchWindow.h */,
-				059938FB1823DF4A00655FB1 /* TouchWindow.m */,
-				059938ED1823DE1200655FB1 /* TouchesPathView.h */,
-				059938EE1823DE1200655FB1 /* TouchesPathView.m */,
-				059938EF1823DE1200655FB1 /* TouchVisualizationView.h */,
-				059938F01823DE1200655FB1 /* TouchVisualizationView.m */,
-				059938F11823DE1200655FB1 /* UIApplication+interceptEvents.h */,
-				059938F21823DE1200655FB1 /* UIApplication+interceptEvents.m */,
-				059938F31823DE1200655FB1 /* SPFunctional.h */,
-				059938F41823DE1200655FB1 /* SPFunctional.m */,
 				059938CD1823DDED00655FB1 /* Images.xcassets */,
 				059938C21823DDED00655FB1 /* Supporting Files */,
 			);
@@ -172,6 +161,25 @@
 				059938DD1823DDED00655FB1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E288FF5F183CBF9500C6752E /* visualize */ = {
+			isa = PBXGroup;
+			children = (
+				E288FF60183CBF9500C6752E /* SPFunctional.h */,
+				E288FF61183CBF9500C6752E /* SPFunctional.m */,
+				E288FF62183CBF9500C6752E /* TouchesPathView.h */,
+				E288FF63183CBF9500C6752E /* TouchesPathView.m */,
+				E288FF64183CBF9500C6752E /* TouchView.h */,
+				E288FF65183CBF9500C6752E /* TouchView.m */,
+				E288FF66183CBF9500C6752E /* TouchVisualizationView.h */,
+				E288FF67183CBF9500C6752E /* TouchVisualizationView.m */,
+				E288FF68183CBF9500C6752E /* TouchWindow.h */,
+				E288FF69183CBF9500C6752E /* TouchWindow.m */,
+				E288FF6A183CBF9500C6752E /* UIApplication+interceptEvents.h */,
+				E288FF6B183CBF9500C6752E /* UIApplication+interceptEvents.m */,
+			);
+			path = visualize;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,14 +277,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				059938F51823DE1200655FB1 /* TouchView.m in Sources */,
-				059938F71823DE1200655FB1 /* TouchVisualizationView.m in Sources */,
-				059938F91823DE1200655FB1 /* SPFunctional.m in Sources */,
-				059938FC1823DF4A00655FB1 /* TouchWindow.m in Sources */,
+				E288FF6E183CBF9500C6752E /* TouchView.m in Sources */,
 				059938CC1823DDED00655FB1 /* AKAppDelegate.m in Sources */,
+				E288FF71183CBF9500C6752E /* UIApplication+interceptEvents.m in Sources */,
 				059938C81823DDED00655FB1 /* main.m in Sources */,
-				059938F81823DE1200655FB1 /* UIApplication+interceptEvents.m in Sources */,
-				059938F61823DE1200655FB1 /* TouchesPathView.m in Sources */,
+				E288FF6F183CBF9500C6752E /* TouchVisualizationView.m in Sources */,
+				E288FF6C183CBF9500C6752E /* SPFunctional.m in Sources */,
+				E288FF6D183CBF9500C6752E /* TouchesPathView.m in Sources */,
+				E288FF70183CBF9500C6752E /* TouchWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +485,7 @@
 				059938E61823DDED00655FB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		059938E71823DDED00655FB1 /* Build configuration list for PBXNativeTarget "VisualizeTouchesTests" */ = {
 			isa = XCConfigurationList;
@@ -485,6 +494,7 @@
 				059938E91823DDED00655FB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
