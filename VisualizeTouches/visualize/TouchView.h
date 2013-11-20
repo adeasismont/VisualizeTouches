@@ -10,7 +10,6 @@ typedef NS_ENUM(NSInteger, TouchViewType) {
 @property(nonatomic,assign) TouchViewType type; // default: TouchViewCircleType
 @property(nonatomic,assign) NSInteger touchNumber; // only displayed in TouchViewCircleType
 
-- (void)appear;
 - (void)remove;
 
 @end
