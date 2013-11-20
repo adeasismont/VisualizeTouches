@@ -48,7 +48,7 @@
             TouchesPathView *pathView = [value[@"path"] pointerValue];
             
             if (!value) {
-                touchView = [[TouchView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+                touchView = [TouchView new];
                 touchView.type = self.touchViewType;
                 
                 if (self.shouldDrawPaths)
@@ -97,19 +97,19 @@
     if (!value)
         return;
     
-    UIView *touchView = [value[@"touch"] pointerValue];
+    TouchView *touchView = [value[@"touch"] pointerValue];
     UIView *pathView = [value[@"path"] pointerValue];
     
     [self.orderedTouchViews removeObject:value[@"touch"]];
     [self.touchViews removeObjectForKey:key];
     
-    [UIView animateWithDuration:0.25
+    [touchView remove];
+    
+    [UIView animateWithDuration:0.2f
                      animations:^{
-                         touchView.alpha = 0.0;
-                         pathView.alpha = 0.0;
+                         [pathView setAlpha:0.f];
                      }
                      completion:^(BOOL finished) {
-                         [touchView removeFromSuperview];
                          [pathView removeFromSuperview];
                      }];
 }

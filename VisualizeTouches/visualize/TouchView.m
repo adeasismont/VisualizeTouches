@@ -6,26 +6,56 @@
 
 @implementation TouchView
 
-- (id)initWithFrame:(CGRect)frame
+- (id)init
 {
-    if (!(self = [super initWithFrame:frame]))
-        return nil;
-    
-    self.backgroundColor = [UIColor clearColor];
-    
-    self.label = [[UILabel alloc] initWithFrame:self.bounds];
-    self.label.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    self.label.textAlignment = NSTextAlignmentCenter;
-    self.label.backgroundColor = [UIColor clearColor];
-    self.label.font = [UIFont boldSystemFontOfSize:13];
-    self.label.textColor = [UIColor blackColor];
-    self.label.shadowColor = [UIColor whiteColor];
-    self.label.shadowOffset = CGSizeMake(0, -1);
-    [self addSubview:self.label];
-    
+    self = [super init];
+    if (self) {
+        [self setFrame:CGRectMake(0.f, 0.f, 40.f, 40.f)];
+        self.backgroundColor = [UIColor clearColor];
+        
+        self.label = [[UILabel alloc] initWithFrame:self.bounds];
+        self.label.alpha = 0.f;
+        self.label.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        self.label.textAlignment = NSTextAlignmentCenter;
+        self.label.backgroundColor = [UIColor clearColor];
+        self.label.font = [UIFont boldSystemFontOfSize:13];
+        self.label.textColor = [UIColor blackColor];
+        self.label.shadowColor = [UIColor whiteColor];
+        self.label.shadowOffset = CGSizeMake(0, -1);
+        [self addSubview:self.label];
+    }
     return self;
 }
 
+- (void)didMoveToSuperview {
+    if ([self superview] != nil) {
+        CGRect finalFrame = [self frame];
+        [self setFrame:CGRectInset([self frame],
+                                   CGRectGetWidth([self frame])/2,
+                                   CGRectGetHeight([self frame])/2)];
+        
+        [UIView animateWithDuration:0.2f
+                         animations:^{
+                             [self setFrame:finalFrame];
+                             [self.label setAlpha:1.f];
+                         }
+                         completion:^(BOOL finished) {
+                             ;
+                         }];
+    }
+}
+
+- (void)remove {
+    CGRect newTouchFrame = CGRectInset([self frame],
+                                       CGRectGetWidth([self frame])/2,
+                                       CGRectGetHeight([self frame])/2);
+    [UIView animateWithDuration:.2f
+                     animations:^{
+                         [self setFrame:newTouchFrame];
+                     } completion:^(BOOL finished) {
+                         [self removeFromSuperview];
+                     }];
+}
 
 #pragma mark - Accessors
 
@@ -69,15 +99,13 @@
     }
 }
 
-- (void)drawCircleInRect:(CGRect)rect
-{
+- (void)drawCircleInRect:(CGRect)rect {
     UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:self.bounds];
-    [[UIColor colorWithWhite:1.0 alpha:0.75] set];
+    [[UIColor colorWithRed:1.f
+                     green:234.f/255.f
+                      blue:193.f/255.f
+                     alpha:.3f] setFill];
     [path fill];
-    
-    [[UIColor darkGrayColor] set];
-    path.lineWidth = 1;
-    [path stroke];
 }
 
 - (void)drawCrosshairInRect:(CGRect)rect
