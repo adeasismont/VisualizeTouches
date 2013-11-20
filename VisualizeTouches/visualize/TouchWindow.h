@@ -5,6 +5,8 @@
     Uses a TouchVisualizationView to overlay the app with touches.
 */
 @interface TouchWindow : UIWindow
-@property(nonatomic,readonly) TouchVisualizationView *touchView;
+
 - (id)init;
+- (void)playTouches; // Just for demo purpose
+
 @end

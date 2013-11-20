@@ -64,7 +64,7 @@
             [self drawCrosshairInRect:rect];
             break;
         default:
-            NSLog(@"Unknown touch view type: %ld", self.type);
+            NSLog(@"Unknown touch view type: %d", self.type);
             break;
     }
 }
