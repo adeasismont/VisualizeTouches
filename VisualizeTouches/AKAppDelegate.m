@@ -2,11 +2,11 @@
 #import "UIApplication+interceptEvents.h"
 #import "TouchWindow.h"
 
-@interface FakeTouch : NSObject <TVTouch>
+@interface FakeTouch : NSObject <VTTouch>
 - (id)initWithPhase:(UITouchPhase)phase point:(CGPoint)p;
 @property(nonatomic) UITouchPhase phase;
 @property(nonatomic) CGPoint point;
-@property(nonatomic) id<NSCopying> tv_touchKey;
+@property(nonatomic) id<NSCopying> vt_touchKey;
 - (CGPoint)locationInView:(UIView*)view;
 @end
 
@@ -84,7 +84,7 @@
         return nil;
     _phase = phase;
     _point = p;
-    _tv_touchKey = [NSValue valueWithNonretainedObject:self];
+    _vt_touchKey = [NSValue valueWithNonretainedObject:self];
     return self;
 }
 - (CGPoint)locationInView:(UIView*)view

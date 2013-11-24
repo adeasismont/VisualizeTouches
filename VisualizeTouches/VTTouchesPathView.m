@@ -1,10 +1,10 @@
-#import "TouchesPathView.h"
+#import "VTTouchesPathView.h"
 
-@interface TouchesPathView ()
+@interface VTTouchesPathView ()
 @property(nonatomic,strong) NSMutableArray *locations;
 @end
 
-@implementation TouchesPathView
+@implementation VTTouchesPathView
 
 - (id)initWithFrame:(CGRect)frame
 {

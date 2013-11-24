@@ -1,6 +1,6 @@
 #import <UIKit/UIKit.h>
 
-@interface TouchesPathView : UIView
+@interface VTTouchesPathView : UIView
 
 - (void)addLocation:(CGPoint)location;
 

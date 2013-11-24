@@ -1,15 +1,15 @@
-#import "TouchVisualizationView.h"
-#import "TouchView.h"
-#import "TouchesPathView.h"
+#import "VTTouchVisualizationView.h"
+#import "VTTouchView.h"
+#import "VTTouchesPathView.h"
 #import "SPFunctional.h"
 
 
-@interface TouchVisualizationView ()
+@interface VTTouchVisualizationView ()
 @property(nonatomic,strong) NSMutableDictionary *touchViews;
 @property(nonatomic,strong) NSMutableArray *orderedTouchViews;
 @end
 
-@implementation TouchVisualizationView
+@implementation VTTouchVisualizationView
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -37,22 +37,22 @@
 - (void)updateTouchesWithVisibleTouches:(NSSet *)touches
 {
     // iterate touches
-    for (id<TVTouch> touch in touches) {
-        id<NSCopying> key = [touch tv_touchKey];
+    for (id<VTTouch> touch in touches) {
+        id<NSCopying> key = [touch vt_touchKey];
         NSDictionary *value = self.touchViews[key];
         
         if (touch.phase == UITouchPhaseCancelled || touch.phase == UITouchPhaseEnded) {
             [self removeKey:key];
         } else {
-            TouchView *touchView = [value[@"touch"] pointerValue];
-            TouchesPathView *pathView = [value[@"path"] pointerValue];
+            VTTouchView *touchView = [value[@"touch"] pointerValue];
+            VTTouchesPathView *pathView = [value[@"path"] pointerValue];
             
             if (!value) {
-                touchView = [[TouchView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+                touchView = [[VTTouchView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
                 touchView.type = self.touchViewType;
                 
                 if (self.shouldDrawPaths)
-                    pathView = [[TouchesPathView alloc] initWithFrame:self.bounds];
+                    pathView = [[VTTouchesPathView alloc] initWithFrame:self.bounds];
                 
                 [self insertSubview:pathView atIndex:0];
                 [self addSubview:touchView];
@@ -73,8 +73,8 @@
     
     // remove no longer present touches (a bug in iOS)
     NSMutableSet *keys = [NSMutableSet setWithArray:[self.touchViews allKeys]];
-    [keys minusSet:[touches sp_map:^(id<TVTouch> touch) {
-        return [touch tv_touchKey];
+    [keys minusSet:[touches sp_map:^(id<VTTouch> touch) {
+        return [touch vt_touchKey];
     }]];
     
     for (NSValue *key in keys)
@@ -83,7 +83,7 @@
     // update index numbers on touch views
     NSInteger index = 1;
     for (NSValue *value in self.orderedTouchViews) {
-        TouchView *view = (TouchView *)[value pointerValue];
+        VTTouchView *view = (VTTouchView *)[value pointerValue];
         view.touchNumber = index++;
     }
 }
@@ -116,8 +116,8 @@
 
 @end
 
-@implementation UITouch (TVTouchCompliance)
-- (id<NSCopying>)tv_touchKey
+@implementation UITouch (VTTouchCompliance)
+- (id<NSCopying>)vt_touchKey
 {
     return [NSValue valueWithNonretainedObject:self];
 }

@@ -14,7 +14,7 @@
     self.backgroundColor = [UIColor clearColor];
     self.userInteractionEnabled = NO;
     self.windowLevel = UIWindowLevelStatusBar;
-    _touchView = [[TouchVisualizationView alloc] initWithFrame:self.bounds];
+    _touchView = [[VTTouchVisualizationView alloc] initWithFrame:self.bounds];
     [self addSubview:_touchView];
     
     return self;

@@ -1,10 +1,10 @@
-#import "TouchView.h"
+#import "VTTouchView.h"
 
-@interface TouchView ()
+@interface VTTouchView ()
 @property(nonatomic,strong) UILabel *label;
 @end
 
-@implementation TouchView
+@implementation VTTouchView
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -39,14 +39,14 @@
     self.label.text = [@(touchNumber) stringValue];
 }
 
-- (void)setType:(TouchViewType)type
+- (void)setType:(VTTouchViewType)type
 {
     if (_type == type)
         return;
     
     _type = type;
     
-    self.label.hidden = (_type != TouchViewCircleType);
+    self.label.hidden = (_type != VTTouchViewCircleType);
     
     [self setNeedsDisplay];
 }
@@ -57,14 +57,14 @@
 - (void)drawRect:(CGRect)rect
 {
     switch (self.type) {
-        case TouchViewCircleType:
+        case VTTouchViewCircleType:
             [self drawCircleInRect:rect];
             break;
-        case TouchViewCrosshairType:
+        case VTTouchViewCrosshairType:
             [self drawCrosshairInRect:rect];
             break;
         default:
-            NSLog(@"Unknown touch view type: %ld", self.type);
+            NSLog(@"Unknown touch view type: %d", self.type);
             break;
     }
 }
