@@ -19,7 +19,6 @@
 		3A5FD6721842B88B00A6022A /* VTTouchesPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 059938EE1823DE1200655FB1 /* VTTouchesPathView.m */; };
 		3A5FD6731842B88B00A6022A /* VTTouchVisualizationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 059938F01823DE1200655FB1 /* VTTouchVisualizationView.m */; };
 		3A5FD6741842B88B00A6022A /* UIApplication+interceptEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 059938F21823DE1200655FB1 /* UIApplication+interceptEvents.m */; };
-		3A5FD6751842B88B00A6022A /* SPFunctional.m in Sources */ = {isa = PBXBuildFile; fileRef = 059938F41823DE1200655FB1 /* SPFunctional.m */; };
 		3A5FD6761842B89C00A6022A /* libVisualizeTouches.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5FD64E1842B81400A6022A /* libVisualizeTouches.a */; };
 /* End PBXBuildFile section */
 
@@ -49,8 +48,6 @@
 		059938F01823DE1200655FB1 /* VTTouchVisualizationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTTouchVisualizationView.m; sourceTree = "<group>"; };
 		059938F11823DE1200655FB1 /* UIApplication+interceptEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+interceptEvents.h"; sourceTree = "<group>"; };
 		059938F21823DE1200655FB1 /* UIApplication+interceptEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+interceptEvents.m"; sourceTree = "<group>"; };
-		059938F31823DE1200655FB1 /* SPFunctional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFunctional.h; sourceTree = "<group>"; };
-		059938F41823DE1200655FB1 /* SPFunctional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFunctional.m; sourceTree = "<group>"; };
 		059938FA1823DF4A00655FB1 /* TouchWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchWindow.h; sourceTree = "<group>"; };
 		059938FB1823DF4A00655FB1 /* TouchWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchWindow.m; sourceTree = "<group>"; };
 		3A5FD6401842B72F00A6022A /* AKAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKAppDelegate.h; sourceTree = "<group>"; };
@@ -128,8 +125,6 @@
 				059938F01823DE1200655FB1 /* VTTouchVisualizationView.m */,
 				059938F11823DE1200655FB1 /* UIApplication+interceptEvents.h */,
 				059938F21823DE1200655FB1 /* UIApplication+interceptEvents.m */,
-				059938F31823DE1200655FB1 /* SPFunctional.h */,
-				059938F41823DE1200655FB1 /* SPFunctional.m */,
 			);
 			path = VisualizeTouches;
 			sourceTree = "<group>";
@@ -241,7 +236,6 @@
 				3A5FD6721842B88B00A6022A /* VTTouchesPathView.m in Sources */,
 				3A5FD6731842B88B00A6022A /* VTTouchVisualizationView.m in Sources */,
 				3A5FD6741842B88B00A6022A /* UIApplication+interceptEvents.m in Sources */,
-				3A5FD6751842B88B00A6022A /* SPFunctional.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

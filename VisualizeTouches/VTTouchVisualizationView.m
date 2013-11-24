@@ -1,7 +1,6 @@
 #import "VTTouchVisualizationView.h"
 #import "VTTouchView.h"
 #import "VTTouchesPathView.h"
-#import "SPFunctional.h"
 
 
 @interface VTTouchVisualizationView ()
@@ -73,9 +72,7 @@
     
     // remove no longer present touches (a bug in iOS)
     NSMutableSet *keys = [NSMutableSet setWithArray:[self.touchViews allKeys]];
-    [keys minusSet:[touches sp_map:^(id<VTTouch> touch) {
-        return [touch vt_touchKey];
-    }]];
+    [keys minusSet:[touches valueForKeyPath:@"vt_touchKey"]];
     
     for (NSValue *key in keys)
         [self removeKey:key];
