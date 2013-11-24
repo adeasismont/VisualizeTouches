@@ -5,6 +5,10 @@ typedef NS_ENUM(NSInteger, VTTouchViewType) {
     VTTouchViewCrosshairType
 };
 
+/**
+ * VTTouchView
+ * Represents a single touch on the screen.
+ */
 @interface VTTouchView : UIView
 
 @property(nonatomic,assign) VTTouchViewType type; // default: TouchViewCircleType

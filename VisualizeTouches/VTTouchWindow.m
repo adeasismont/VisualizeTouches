@@ -64,6 +64,9 @@
 
 - (void)handleEvent:(UIEvent *)event
 {
+    if (event.type != UIEventTypeTouches)
+        return;
+    
     [self.touchView updateTouchesWithVisibleTouches:event.allTouches];
 }
 

@@ -20,6 +20,7 @@
 		3A5FD6731842B88B00A6022A /* VTTouchVisualizationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 059938F01823DE1200655FB1 /* VTTouchVisualizationView.m */; };
 		3A5FD6741842B88B00A6022A /* UIApplication+VTInterceptEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 059938F21823DE1200655FB1 /* UIApplication+VTInterceptEvents.m */; };
 		3A5FD6761842B89C00A6022A /* libVisualizeTouches.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5FD64E1842B81400A6022A /* libVisualizeTouches.a */; };
+		3A5FD67B1842C24300A6022A /* AKFakeTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FD67A1842C24300A6022A /* AKFakeTouch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,6 +58,10 @@
 		3A5FD6441842B72F00A6022A /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		3A5FD6481842B7E300A6022A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3A5FD64E1842B81400A6022A /* libVisualizeTouches.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVisualizeTouches.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A5FD6771842C02200A6022A /* VisualizeTouches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisualizeTouches.h; sourceTree = "<group>"; };
+		3A5FD6781842C05B00A6022A /* VTTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTTouch.h; sourceTree = "<group>"; };
+		3A5FD6791842C24300A6022A /* AKFakeTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKFakeTouch.h; sourceTree = "<group>"; };
+		3A5FD67A1842C24300A6022A /* AKFakeTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKFakeTouch.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +120,8 @@
 		059938C11823DDED00655FB1 /* VisualizeTouches */ = {
 			isa = PBXGroup;
 			children = (
+				3A5FD6771842C02200A6022A /* VisualizeTouches.h */,
+				3A5FD6781842C05B00A6022A /* VTTouch.h */,
 				059938FA1823DF4A00655FB1 /* VTTouchWindow.h */,
 				059938FB1823DF4A00655FB1 /* VTTouchWindow.m */,
 				059938EB1823DE1200655FB1 /* VTTouchView.h */,
@@ -134,6 +141,8 @@
 			children = (
 				3A5FD6401842B72F00A6022A /* AKAppDelegate.h */,
 				3A5FD6411842B72F00A6022A /* AKAppDelegate.m */,
+				3A5FD6791842C24300A6022A /* AKFakeTouch.h */,
+				3A5FD67A1842C24300A6022A /* AKFakeTouch.m */,
 				3A5FD6421842B72F00A6022A /* main.m */,
 				3A5FD6441842B72F00A6022A /* Prefix.pch */,
 				3A5FD6431842B72F00A6022A /* Info.plist */,
@@ -224,6 +233,7 @@
 			files = (
 				3A5FD6451842B72F00A6022A /* AKAppDelegate.m in Sources */,
 				3A5FD6461842B72F00A6022A /* main.m in Sources */,
+				3A5FD67B1842C24300A6022A /* AKFakeTouch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

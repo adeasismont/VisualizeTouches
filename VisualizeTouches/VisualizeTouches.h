@@ -1,0 +1,5 @@
+#import "VTTouchWindow.h"
+#import "VTTouchView.h"
+#import "VTTouchesPathView.h"
+#import "VTTouchVisualizationView.h"
+#import "VTTouch.h"

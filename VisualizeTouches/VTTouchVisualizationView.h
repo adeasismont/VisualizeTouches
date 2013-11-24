@@ -1,24 +1,41 @@
 #import <UIKit/UIKit.h>
 #import "VTTouchView.h"
+#import "VTTouch.h"
 
 /**
     Visualizes touches; either ones captured by UIApplication+interceptEvents
     or TVTouch-conforming recorded touches.
 */
+/**
+ * VTTouchVisualizationView
+ * Visualizes touches; see VTTouchWindow for capturing touch events,
+ * or VTTouch-conforming synthesized touches.
+ */
 @interface VTTouchVisualizationView : UIView
+
+/**
+ * Specfies how the touches should be drawn.
+ * See VTTouchView.
+ */
 @property(nonatomic,assign) VTTouchViewType touchViewType;
+
+/**
+ * Specifies if touch paths should be drawn.
+ * Default: NO
+ */
 @property(nonatomic,assign) BOOL shouldDrawPaths;
+
+/**
+ * Updates the touch visualization with the passed in set of touches.
+ * See -[VTTouchWindow handleEvent:] for sample implementation.
+ * @param touches Current visible touches
+ */
 - (void)updateTouchesWithVisibleTouches:(NSSet *)touches;
+
 @end
 
-/** The TVTouch protocol exists so that you can play back recorded touches
-    or other synthesized touches without having to create real UITouches */
-@protocol VTTouch <NSObject>
-@property(nonatomic,readonly) UITouchPhase        phase;
-- (CGPoint)locationInView:(UIView*)view;
-/// Uniquely identify this touch. For UITouch, returns NSValue with self.
-- (id<NSCopying>)vt_touchKey;
-@end
-
+/**
+ * VTTouch compliance for UITouch.
+ */
 @interface UITouch (VTTouchCompliance) <VTTouch>
 @end
