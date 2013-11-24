@@ -1,6 +1,6 @@
 #import "AKAppDelegate.h"
-#import "UIApplication+interceptEvents.h"
-#import "TouchWindow.h"
+#import "VTTouchWindow.h"
+#import "VTTouchVisualizationView.h"
 
 @interface FakeTouch : NSObject <VTTouch>
 - (id)initWithPhase:(UITouchPhase)phase point:(CGPoint)p;
@@ -13,7 +13,7 @@
 
 @implementation AKAppDelegate
 {
-    TouchWindow *_touchWindow;
+    VTTouchWindow *_touchWindow;
 }
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -30,21 +30,13 @@
     [_window addSubview:play];
     
     // Show touches in this window
-    _touchWindow = [TouchWindow new];
+    _touchWindow = [VTTouchWindow new];
     _touchWindow.touchView.shouldDrawPaths = YES;
-    _touchWindow.hidden = NO;
     
-    // Intercept all touches in app and forward them to the visualizer
-    [UIApplication visualizetouches_swizzleSendEvent];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(touchReceived:) name:AKInterceptedTouchNotification object:nil];
+    // Start intercepting application events
+    [_touchWindow beginInterceptingEvents];
     
     return YES;
-}
-
-- (void)touchReceived:(NSNotification*)notif
-{
-    UIEvent *event = notif.userInfo[AKInterceptedEventUserInfoKey];
-    [_touchWindow.touchView updateTouchesWithVisibleTouches:event.allTouches];
 }
 
 - (IBAction)playTouches:(id)sender
@@ -78,6 +70,7 @@
 @end
 
 @implementation FakeTouch
+
 - (id)initWithPhase:(UITouchPhase)phase point:(CGPoint)p
 {
     if(!(self = [super init]))
@@ -87,8 +80,10 @@
     _vt_touchKey = [NSValue valueWithNonretainedObject:self];
     return self;
 }
+
 - (CGPoint)locationInView:(UIView*)view
 {
     return _point;
 }
+
 @end
